@@ -1,0 +1,28 @@
+<h1>Product</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Brand</th>
+        <th>Product_Name</th>
+        <th>Product_weight</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Quantity</th>
+        <th>Manuf_Date</th>
+        <th>Exp_Date</th>
+    </tr>
+     {{#each data}}
+    <tr>
+        <td>{{this.Pro_Id}}</td>
+        <th>{{this.Brand}}</th>
+        <th>{{this.Product_Name}}</th>
+        <th>{{this.Product_weight}}</th>
+        <th>{{this.Price}}</th>
+        <th>{{this.Discount}}</th>
+        <th>{{this.Quantity}}</th>
+        <th>{{this.Manuf_Date}}</th>
+        <th>{{this.Exp_Date}}</th>
+    </tr>
+    {{/each}}
+</table>

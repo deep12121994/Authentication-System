@@ -1,0 +1,28 @@
+<h1>Orders</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Customer_Name</th>
+        <th>Customer_Number</th>
+        <th>Order_Type</th>
+        <th>Quantity</th>
+        <th>Total_Amount</th>
+        <th>Paid</th>
+        <th>Paid_Amount</th>
+        <th>Discount</th>
+    </tr>
+     {{#each data}}
+    <tr>
+        <td>{{this.Order_Id}}</td>
+        <th>{{this.Customer_Name}}</th>
+        <th>{{this.Customer_Number}}</th>
+        <th>{{this.Order_Type}}</th>
+        <th>{{this.Quantity}}</th>
+        <th>{{this.Total_Amount}}</th>
+        <th>{{this.Paid}}</th>
+        <th>{{this.Paid_Amount}}</th>
+        <th>{{this.Discount}}</th>
+    </tr>
+    {{/each}}
+</table>
