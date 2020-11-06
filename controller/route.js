@@ -4,7 +4,9 @@ const {user_Registration, user_List, login, find_User, update_User, remove_User 
 const {product_Registration, product_List, find_Product, remove_Product, update_Product } = require("./products.control");
 const { vendor_Registration, vendor_List, find_Vendor, update_Vendor, remove_Vendor} = require("./vendors.control");
 const { order_Registration, order_List, update_Order, find_Order, remove_Order, orderDetails_Registration} = require("./orders.control");
+const {signup} = require("./auth");
 
+router.post("/signup", signup);
 //users controller
 router.post("/user/registration", user_Registration);
 router.get("/user/user_list", user_List);

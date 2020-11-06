@@ -15,10 +15,9 @@ exports.user_Registration = (req, res) => {
             var mo_Users = new userModel();
             mo_Users.First_Name = req.body.First_Name;
             mo_Users.Last_Name = req.body.Last_Name;
-            mo_Users.DOB = req.body.DOB;
             mo_Users.Email = req.body.Email;
             mo_Users.Phone = req.body.Phone;
-            mo_Users.Password = req.body.Password;
+            mo_Users.hashed_Password = req.body.hashed_Password;
          
             mo_Users.save((err, doc) => {
                 if(!err)

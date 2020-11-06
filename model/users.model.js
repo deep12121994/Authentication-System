@@ -81,14 +81,15 @@ UsersSchema.methods = {
     }
   }
   
-  UserSchema.virtual("password")
+  UsersSchema.virtual("password")
     .set(function (password) {
-      this._password = password;
-      this.salt = this.makeSalt();
-      this.hashed_password = this.encryptPassword(password);
+
+      this._password = password;  // temporary variable called password
+      this.salt = this.makeSalt();  // generate salt and save it in our database
+      this.hashed_password = this.encryptPassword(password); //encrypt the password and saved password 
     })
     .get(function () {
-      return this._password;
+      return this._password;  // return data only not saved  
     });
   
 mongoose.model("users",UsersSchema);
